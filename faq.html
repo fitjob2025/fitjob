@@ -53,152 +53,120 @@
         </div>
     </nav>
 
-<!-- Main Content -->
-<div class="container my-5">
-  <div class="row">
 
-    <!-- User Info -->
-    <div class="col-md-4 mb-4">
-      <div class="card shadow-lg p-4 rounded-4" style="border: none;">
-        <div class="card-body">
-
-          <div class="d-flex justify-content-start" style="align-items: center;">
-            <a href="order.html" class="btn btn-primary mt-3">
-              <i class="fas fa-shopping-cart ms-2"></i>سبد خرید
-            </a>
+<br><br><br>
+<main class="container py-5 card shadow-lg p-4 rounded-4" dir="rtl">
+    <h1 class="text-center mb-5" style="color: #00b4d8;">سوالات متداول</h1>
+  
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            رژیم‌های فیت‌جاب چطور طراحی می‌شن؟
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            رژیم‌های فیت‌جاب بر اساس نوع شغل، سطح فعالیت بدنی، و شرایط فردی مثل قد، وزن، و هدف (کاهش وزن، افزایش انرژی، و ...) طراحی می‌شن.
           </div>
-
-          <div class="d-flex align-items-center mt-4">
-            <img src="img/fitjob logo1.png" alt="لوگو" style="width: 30px; height: 30px; margin-left: 10px;">
-            <p class="mb-0" style="margin-top: 10px;">خوش آمدید</p>
-          </div>
-
-          <ul class="list-group mt-3 text-end">
-            <li class="list-group-item border-0">
-              <a href="user-panel.html" class="text-decoration-none text-dark">
-                <i class="fas fa-columns ms-2"></i>داشبورد
-              </a>
-            </li>
-            <li class="list-group-item border-0">
-              <a href="Wallet.html" class="text-decoration-none text-dark">
-                <i class="fas fa-wallet ms-2"></i>کیف پول
-              </a>
-            </li>
-            <li class="list-group-item border-0">
-              <a href="edit-profile.html" class="text-decoration-none text-dark">
-                <i class="fas fa-user ms-2"></i>مشخصات فردی
-              </a>
-            </li>
-            <li class="list-group-item border-0">
-              <a href="order-history.html" class="text-decoration-none text-dark">
-                <i class="fas fa-file-invoice ms-2"></i> تاریخچه سفارشات
-              </a>
-            </li>
-            <li class="list-group-item border-0">
-              <a href="change-password.html" class="text-decoration-none text-dark">
-                <i class="fas fa-key ms-2"></i>تغییر رمز عبور
-              </a>
-            </li>
-            <li class="list-group-item border-0">
-              <a href="#" class="text-decoration-none text-dark">
-                <i class="fas fa-sign-out-alt ms-2"></i>خروج
-              </a>
-            </li>
-          </ul>
-
         </div>
       </div>
-    </div>
-
-    <!-- User Profile -->
-    <div class="col-md-8">
-<!-- Toasts -->
-<div class="toast-container position-fixed bottom-0 end-0 p-3 z-3">
-  <!-- Success Toast -->
-  <div id="passwordSuccessToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="d-flex">
-      <div class="toast-body">
-        رمز عبور با موفقیت تغییر کرد!
-      </div>
-      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="بستن"></button>
-    </div>
-  </div>
-
-  <!-- Error Toast -->
-  <div id="passwordErrorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="d-flex">
-      <div class="toast-body" id="errorText">
-        مشکلی وجود دارد!
-      </div>
-      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="بستن"></button>
-    </div>
-  </div>
-</div>
-
-<!-- Form -->
-<div class="card shadow-lg p-4 rounded-4" style="border: none;">
-  <div class="card-body">
-    <h5 class="text-center mb-4 text-primary">تغییر رمز عبور</h5>
-    <hr>
-
-    <form id="changePasswordForm">
-      <div class="mb-3">
-        <label for="currentPassword" class="form-label">رمز فعلی</label>
-        <input type="password" class="form-control" id="currentPassword" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="newPassword" class="form-label">رمز جدید</label>
-        <input type="password" class="form-control" id="newPassword" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="confirmPassword" class="form-label">تکرار رمز جدید</label>
-        <input type="password" class="form-control" id="confirmPassword" required>
-      </div>
-
-      <div class="mb-3">
-        <button type="submit" class="btn btn-primary w-100">ذخیره تغییرات</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- Script -->
-<script>
-  document.getElementById("changePasswordForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // جلوگیری از رفرش شدن
-
-    const current = document.getElementById("currentPassword").value.trim();
-    const newPass = document.getElementById("newPassword").value.trim();
-    const confirm = document.getElementById("confirmPassword").value.trim();
-
-    const errorToastEl = document.getElementById("passwordErrorToast");
-    const successToastEl = document.getElementById("passwordSuccessToast");
-    const errorText = document.getElementById("errorText");
-
-    if (!current || !newPass || !confirm) {
-      errorText.innerText = "لطفاً تمام فیلدها را پر کنید.";
-      new bootstrap.Toast(errorToastEl).show();
-    } else if (newPass.length < 6) {
-      errorText.innerText = "رمز جدید باید حداقل ۶ کاراکتر باشد.";
-      new bootstrap.Toast(errorToastEl).show();
-    } else if (newPass !== confirm) {
-      errorText.innerText = "رمز جدید و تکرار آن یکسان نیستند.";
-      new bootstrap.Toast(errorToastEl).show();
-    } else {
-      new bootstrap.Toast(successToastEl).show();
-      // در اینجا می‌تونی فرم رو ارسال کنی یا API بزنی
-    }
-  });
-</script>
-
-    </div>
-
-  </div>
-</div>
-    
   
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            آیا برای دریافت رژیم نیاز به مشاوره حضوری هست؟
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            خیر، همه‌ی مراحل دریافت رژیم به صورت آنلاین انجام می‌گیره. فقط اطلاعات شما به‌دقت وارد بشه.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            آیا رژیم برای مشاغل خاص مثل کارمندان شیفت شب یا راننده‌ها هم هست؟
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            بله، فیت‌جاب دقیقا برای همین طراحی شده. ما برای شغل‌های خاص، برنامه‌های ویژه داریم.
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            بعد از خرید رژیم، چه‌زمانی فایل رژیم ارسال می‌شه؟
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            حداکثر تا ۲۴ ساعت بعد از ثبت اطلاعات، رژیم غذایی براتون از طریق پنل کاربری یا ایمیل ارسال می‌شه.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+            رژیم‌ها برای افراد با بیماری‌های خاص (مثل دیابت یا فشار خون) هم مناسب هستن؟
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            بله، در فرم دریافت رژیم بخشی برای مشخص‌کردن وضعیت سلامت هست و برنامه‌ها با در نظر گرفتن شرایط خاص پزشکی تنظیم می‌شن.
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+            اگه نتیجه رژیم برام مناسب نبود، می‌تونم دوباره تنظیمش کنم؟
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            بله، بعد از ۲ هفته می‌تونی درخواست بازبینی بدی و رژیمت رو متناسب با بازخورد بدنت به‌روزرسانی کنیم.
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+            آیا می‌تونم هم‌زمان چند هدف مثل کاهش وزن و افزایش انرژی داشته باشم؟
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            بله، رژیم‌ها به‌گونه‌ای طراحی می‌شن که چند هدف شما رو به‌صورت هم‌زمان پوشش بدن، مثلاً کاهش وزن همراه با افزایش تمرکز یا انرژی روزانه.
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+            آیا امکان پشتیبانی و پرسیدن سوال بعد از دریافت رژیم وجود داره؟
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            حتماً. ما از طریق پنل کاربری و بخش پشتیبانی در کنارتون هستیم تا هر سوالی داشتید جواب بدیم یا رژیم رو اصلاح کنیم.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+  <br><br><br>
+
 
 
 <!-- Footer -->
@@ -266,10 +234,7 @@
     </div>
   </div>
 </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+  
 <!-- دکمه اسکرول به بالا -->
 <button onclick="scrollToTop()" id="scrollTopBtn" title="برو بالا">
   <i class="fas fa-arrow-up"></i>
@@ -314,5 +279,7 @@
   }
 </script>
 
-</body>
-</html>
+  </body>
+  </html>
+  
+  

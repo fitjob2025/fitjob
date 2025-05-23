@@ -5,7 +5,7 @@
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
     
     <meta charset="UTF-8">
-    <title>ورود / ثبت‌نام</title>
+    <title>قوانین و مقررات</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
@@ -53,55 +53,39 @@
       </div>
   </nav>
 
-    <div class="container login-register-container mt-5">
-        <div class="card shadow-lg p-4 rounded-4">
-          <div class="row">
-            <!-- فرم ورود -->
-            <div class="col-md-6 login-form-col">
+<br><br><br>
+  <main class="container py-5 container py-5 card shadow-lg p-4 rounded-4" dir="rtl">
+    <h1 class="text-center mb-5" style="color: #00b4d8;">قوانین و مقررات استفاده از فیت‌جاب</h1>
+  
+    <h5>۱. ثبت‌نام و اطلاعات کاربری</h5>
+    <p>
+      کاربران موظف‌اند اطلاعات شخصی خود را به‌صورت دقیق و واقعی وارد کنند. هرگونه مغایرت ممکن است باعث نادرستی رژیم و عدم پاسخگویی ما شود.
+    </p>
+  
+    <h5>۲. نحوه پرداخت و بازگشت وجه</h5>
+    <p>
+      هزینه‌ها به‌صورت آنلاین دریافت می‌شوند. به دلیل ماهیت خدمات (فایل سفارشی‌شده)، امکان بازگشت وجه وجود ندارد مگر در موارد خاص و تایید تیم پشتیبانی.
+    </p>
+  
+    <h5>۳. مسئولیت سلامت کاربران</h5>
+    <p>
+      رژیم‌ها با دقت بالا طراحی می‌شوند، اما فیت‌جاب مسئولیتی در قبال مشکلات ناشی از اطلاعات نادرست کاربر یا شرایط پزشکی پنهان‌شده ندارد. پیشنهاد می‌شود پیش از شروع رژیم با پزشک خود مشورت کنید.
+    </p>
+  
+    <h5>۴. حقوق مالکیت محتوا</h5>
+    <p>
+      تمامی محتوای سایت، طراحی رژیم‌ها و متون متعلق به فیت‌جاب است و هرگونه کپی‌برداری بدون اجازه پیگرد قانونی دارد.
+    </p>
+  
+    <h5>۵. تغییرات قوانین</h5>
+    <p>
+      فیت‌جاب حق دارد در هر زمان قوانین را به‌روزرسانی کند. کاربران موظف به بررسی دوره‌ای این صفحه هستند.
+    </p>
+  </main>
+  
+<br><br><br>
 
-              <h4 class="text-center mb-4">ورود</h4>
-              <form>
-                <div class="mb-3">
-                  <label for="loginPhone" class="form-label">شماره موبایل</label>
-                  <input type="tel" class="form-control login-input" id="loginPhone" >
-                </div>
-                <div class="mb-3">
-                  <label for="loginPassword" class="form-label">رمز عبور</label>
-                  <input type="password" class="form-control login-input" id="loginPassword" >
-                </div>
-                <div class="mb-3 text-end">
-                  <a href="forgot-password.html" class="text-decoration-none small text-primary">فراموشی رمز عبور؟</a>
-                </div>
-                <a href="user-panel.html" class="btn btn-primary">ورود</a>
-                
-              </form>
-            </div>
-      
-            <!-- فرم ثبت‌نام -->            
-            <div class="col-md-6 register-form-col">
 
-              <h4 class="text-center mb-4">ثبت‌نام</h4>
-              <form>
-                <div class="mb-3">
-                  <label for="registerName" class="form-label">نام کامل</label>
-                  <input type="text" class="form-control login-input" id="registerName" required>
-                </div>
-                <div class="mb-3">
-                  <label for="registerPhone" class="form-label">شماره موبایل</label>
-                  <input type="tel" class="form-control login-input" id="registerPhone" required>
-                </div>
-                <div class="mb-3">
-                  <label for="registerPassword" class="form-label">رمز عبور</label>
-                  <input type="password" class="form-control login-input" id="registerPassword" required>
-                </div>
-                <a href="user-panel.html" class="btn btn-primary">ثبت نام</a>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br><br><br>
-      
 <!-- Footer -->
 <footer class="footer text-white py-4" dir="rtl">
   <div class="container">
@@ -211,49 +195,5 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
-
-<!-- مودال خوشامد ثبت‌نام -->
-<div class="modal fade" id="signupWelcomeModal" tabindex="-1" aria-labelledby="signupWelcomeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-success text-white">
-        <h5 class="modal-title" id="signupWelcomeModalLabel">خوش آمدید به فیت‌جاب!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
-      </div>
-      <div class="modal-body text-center">
-        <p>ثبت‌نام با موفقیت انجام شد. خوشحالیم که به جمع ما پیوستید!</p>
-        <img src="img/fitjob logo.png" alt="لوگو فیت‌جاب" style="max-width: 100px;">
-      </div>
-      <div class="modal-footer justify-content-center">
-        <a href="user-panel.html" class="btn btn-success">رفتن به پنل کاربری</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  // نمایش مودال بعد از کلیک روی دکمه ثبت‌نام
-  document.addEventListener("DOMContentLoaded", function() {
-    const registerForm = document.querySelector(".register-form-col form");
-    const signupButton = registerForm.querySelector("a.btn");
-
-    signupButton.addEventListener("click", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("registerName").value;
-      const phone = document.getElementById("registerPhone").value;
-      const pass = document.getElementById("registerPassword").value;
-
-      if (name && phone && pass) {
-        const modal = new bootstrap.Modal(document.getElementById("signupWelcomeModal"));
-        modal.show();
-      } else {
-        alert("لطفاً تمام فیلدهای ثبت‌نام را پر کنید.");
-      }
-    });
-  });
-</script>
-
-
-
 </body>
 </html>

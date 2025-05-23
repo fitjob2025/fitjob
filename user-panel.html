@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پنل کاربری</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/user-panel.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-        <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    
+    <meta charset="UTF-8">
+    <title>پنل کاربری</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="img/fitjob logo.png" type="image/png">
+
+    <link rel="icon" href="img/fitjob logo1.png" type="image/png">
 </head>
 <body>
+
+
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg main-header">
@@ -33,9 +38,10 @@
                   <li class="nav-item"><a class="nav-link" href="about-us.html">درباره ما</a></li>
                   <li class="nav-item"><a class="nav-link" href="contact-us.html">تماس با ما</a></li>
                   <li class="nav-item"><a class="nav-link" href="order.html">دریافت رژیم</a></li>
+                  <li class="nav-item"><a class="nav-link" href="calculator.html">ماشین‌حساب</a></li>
                 </ul>
               
-                              
+                
                 <!-- فرم جستجو -->
                 <form class="d-flex search-form" role="search">
                   <input class="form-control me-2" type="search" placeholder="جستجو">
@@ -45,82 +51,227 @@
               
         </div>
     </nav>
-
-    <!-- Main Content -->
-    <div class="container my-5 user-panel">
-        <div class="row">
-            <!-- User Info -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-start">
-                            <a href="order.html" class="btn btn-primary mt-3 fas fa-shopping-cart" >سبد خرید </a>
-                        </div>
-                        <div class="d-flex align-items-center mt-4">
-                        <img src="img/fitjob logo1.png" alt="لوگو" class="logo me-2" width="30" height="30">
-                        <p class="mt-4">خوش آمدید</p>
-                    </div>
-                        <ul class="list-group mt-3 text-start pe-2">
-                            <li class="list-group-item"><a href="Dashboard.html" class="text-decoration-none text-dark"><i class="fas fa-columns"></i> داشبورد</a></li>
-                            <li class="list-group-item"><a href="Wallet.html" class="text-decoration-none text-dark"><i class="fas fa-wallet"></i> کیف پول</a></li>
-                            <li class="list-group-item"><a href="settings.html" class="text-decoration-none text-dark"><i class="fas fa-cogs"></i> تنظیمات حساب</a></li>
-                            <li class="list-group-item"><a href="edit-profile.html" class="text-decoration-none text-dark"><i class="fas fa-user"></i> مشخصات فردی</a></li>
-                            <li class="list-group-item"><a href="cancel-subscription.html" class="text-decoration-none text-dark"><i class="fas fa-times-circle"></i> لغو اشتراک</a></li>
-                            <li class="list-group-item"><a href="change-password.html" class="text-decoration-none text-dark"><i class="fas fa-key"></i> تغییر رمز عبور</a></li>
-                            <li class="list-group-item"><a href="exit.html" class="text-decoration-none text-dark"><i class="fas fa-sign-out-alt"></i> خروج</a></li>
-                        </ul>
-                    </div>
-                </div>
+<!-- Main Content -->
+<div class="container my-5">
+    <div class="row">
+  
+      <!-- User Info -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-lg p-4 rounded-4" style="border: none;">
+          <div class="card-body">
+  
+            <div class="d-flex justify-content-start" style="align-items: center;">
+              <a href="order.html" class="btn btn-primary mt-3">
+                <i class="fas fa-shopping-cart ms-2"></i>سبد خرید
+              </a>
             </div>
-
-            <!-- User Profile -->
-            <div class="col-md-8">
-                <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                        <img src="img/user.png" class="rounded-circle" width="100" height="100">
-                        <p class="mt-3">سحر محمدی</p>
-                        <p class="text-muted">کاربر ویژه</p>
-                        <p class="text-success">اشتراک فعال: سه ماهه</p>
-                        <a href="edit-profile.html" class="btn btn-primary mt-3">ویرایش پروفایل</a>
-                    </div>
-                </div>
+  
+            <div class="d-flex align-items-center mt-4">
+              <img src="img/fitjob logo1.png" alt="لوگو" style="width: 30px; height: 30px; margin-left: 10px;">
+              <p class="mb-0" style="margin-top: 10px;">خوش آمدید</p>
             </div>
+  
+            <ul class="list-group mt-3 text-end">
+              <li class="list-group-item border-0">
+                <a href="user-panel.html" class="text-decoration-none text-dark">
+                  <i class="fas fa-columns ms-2"></i>داشبورد
+                </a>
+              </li>
+              <li class="list-group-item border-0">
+                <a href="Wallet.html" class="text-decoration-none text-dark">
+                  <i class="fas fa-wallet ms-2"></i>کیف پول
+                </a>
+              </li>
+              <li class="list-group-item border-0">
+                <a href="edit-profile.html" class="text-decoration-none text-dark">
+                  <i class="fas fa-user ms-2"></i>مشخصات فردی
+                </a>
+              </li>
+              <li class="list-group-item border-0">
+                <a href="order-history.html" class="text-decoration-none text-dark">
+                  <i class="fas fa-file-invoice ms-2"></i> تاریخچه سفارشات
+                </a>
+              </li>
+              
+              <li class="list-group-item border-0">
+                <a href="change-password.html" class="text-decoration-none text-dark">
+                  <i class="fas fa-key ms-2"></i>تغییر رمز عبور
+                </a>
+              </li>
+              <li class="list-group-item border-0">
+                <a href="login-register.html" class="text-decoration-none text-dark">
+                  <i class="fas fa-sign-out-alt ms-2"></i>خروج
+                </a>
+              </li>
+              
+            </ul>
+  
+          </div>
         </div>
+      </div>
+  
+      <!-- User Profile -->
+      <div class="col-md-8">
+        <div class="card shadow-lg p-4 rounded-4" style="border: none;">
+          <div class="card-body text-center">
+            <img src="img/user.png" alt="عکس کاربر" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <h5 class="mb-1">سحر محمدی</h5>
+            <p class="text-muted mb-2">کاربر ویژه</p>
+            <p class="text-success mb-3">اشتراک فعال: سه ماهه</p>
+      
+            <div class="row justify-content-center text-end mb-3" dir="rtl">
+              <div class="col-10 col-md-8">
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">قد:</span>
+                  <span>۱۶۵ سانتی‌متر</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">وزن:</span>
+                  <span>۶۸ کیلوگرم</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">سن:</span>
+                  <span>۲۸ سال</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">جنسیت:</span>
+                  <span>خانم</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">هدف رژیم:</span>
+                  <span>کاهش وزن</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">شغل:</span>
+                  <span>کارمند اداری</span>
+                </div>
+              </div>
+            </div>
+      
+            <a href="edit-profile.html" class="btn btn-outline-primary me-2 mt-2">ویرایش اطلاعات</a>
+            <a href="change-password.html" class="btn btn-outline-secondary mt-2">تغییر رمز عبور</a>
+          </div>
+        </div>
+      </div>
+      
+      
+  
     </div>
+  </div>
 
-    <!-- Footer -->
+  
+  
+<!-- Footer -->
 <footer class="footer text-white py-4" dir="rtl">
-    <div class="container">
-        <div class="row">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/fitjob logo.png" height="50px" alt="FitJob Logo">
-          </a>
-        </div>
-        <br><br>
-        <div class="row">
-            <div class="col-md-4" ><h5 style="color: #fcd34d ;">درباره ما</h5 >
-              <p>ما در فیت‌جاب تلاش می‌کنیم سلامت شغلی را با تغذیه درست ترکیب کنیم.</p>
-            </div>
-            <div class="col-md-4" style="color: #fcd34d ;"><h5>لینک‌ها</h5>
-              <ul class="list-unstyled">
-                <li><a href="index.html" class="text-white"><i class="fas fa-home ms-2"></i>خانه</a></li>
-                <li><a href="blog.html" class="text-white"><i class="fas fa-blog ms-2"></i>وبلاگ</a></li>
-                <li><a href="contact-us.html" class="text-white"><i class="fas fa-envelope ms-2"></i>تماس با ما</a></li>
-            </ul>                        
-            </div>
-            <div class="col-md-4">
-              <h5 style="color: #fcd34d ;">ارتباط با ما</h5>
-              <p><i class="fas fa-envelope ms-2"></i>ایمیل: info[at]fitjob.com</p>
-              <p><i class="fas fa-phone ms-2"></i>تلفن: <span dir="ltr">۰۲۵-۳۳۳۳۳۳۳</span></p>
-            </div>            
-        </div>
-        <div class="text-center pt-3" style="color: #fcd34d ;">
-            <p class="mb-0">&copy; 2025 <a href="index.html">فیت‌جاب</a> - تمامی حقوق محفوظ است.</p>
-        </div>
+  <div class="container">
+    <div class="row">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/fitjob logo.png" height="50px" alt="FitJob Logo">
+      </a>
     </div>
-</footer>
 
+    <br><br>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h5 style="color: #fcd34d;">
+          <i class="fas fa-info-circle me-2"></i>          درباره ما
+        </h5>
+        <p>ما در فیت‌جاب تلاش می‌کنیم سلامت شغلی را با تغذیه درست ترکیب کنیم.</p>
+      </div>
+
+      <div class="col-md-3" style="color: #fcd34d;">
+        <h5>
+          <i class="fas fa-link me-2"></i>          لینک‌ها
+        </h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white"><i class="fas fa-home ms-2"></i>خانه</a></li>
+          <li><a href="blog.html" class="text-white"><i class="fas fa-blog ms-2"></i>وبلاگ</a></li>
+          <li><a href="contact-us.html" class="text-white"><i class="fas fa-phone-alt ms-2"></i>تماس با ما</a></li>
+          <li><a href="faq.html" class="text-white"><i class="fas fa-question-circle ms-2"></i>سوالات متداول</a></li>
+          <li><a href="terms.html" class="text-white"><i class="fas fa-file-contract ms-2"></i>قوانین و مقررات</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5 style="color: #fcd34d;">
+          <i class="fas fa-paper-plane"></i> ارتباط با ما
+        </h5>
+        <p>
+          <i class="fas fa-envelope ms-2"></i>
+          ایمیل:
+          <a href="mailto:info@fitjob.com" class="text-white">info@fitjob.com</a>
+        </p>
+        <p>
+          <i class="fas fa-phone ms-2"></i>
+          تلفن:
+          <a href="tel:0253333333" class="text-white" dir="ltr">۰۲۵-۳۳۳۳۳۳۳</a>
+        </p>
+      </div>
+
+      <!-- نقشه گوگل -->
+      <div class="col-md-3">
+        <h5 style="color: #fcd34d;">
+          <i class="fas fa-map-marker-alt me-2"></i> موقعیت ما
+        </h5>        
+        <div class="ratio ratio-4x3 rounded overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1381.383505070901!2d50.81211789202067!3d34.566157679477804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f93a3d0521940c5%3A0xfb39e13adacfccdc!2sQom%20Girls%20National%20University%20of%20Skills!5e0!3m2!1sen!2sus!4v1747921295436!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="text-center pt-3" style="color: #fcd34d;">
+      <p class="mb-0">&copy; 2025 <a href="index.html">فیت‌جاب</a> - تمامی حقوق محفوظ است.</p>
+    </div>
+  </div>
+</footer>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- دکمه اسکرول به بالا -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="برو بالا">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<style>
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: none;
+    background-color: #fcd34d;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  #scrollTopBtn:hover {
+    background-color: #f9c61e;
+    transform: translateY(-3px);
+  }
+
+  #scrollTopBtn i {
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function() {
+    scrollBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
 </body>
 </html>
