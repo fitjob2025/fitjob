@@ -20,13 +20,6 @@ const headerHTML = `
               <li class="nav-item"><a class="nav-link" href="calculator.html">ماشین‌حساب</a></li>
             </ul>
 
-            <!-- فرم جستجو -->
-            <form class="d-flex search-form" role="search">
-              <input class="form-control me-2" type="search" placeholder="جستجو">
-              <button class="btn" type="submit" style="margin-left: 20px;">
-                <i class="fas fa-search"></i>
-              </button>              
-            </form>
 
             <!-- دکمه ورود/ثبت‌نام -->
             <a href="login-register.html" class="btn ms-2" style="background-color: #fcd34d ;">ورود / ثبت‌نام</a>

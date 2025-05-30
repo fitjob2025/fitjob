@@ -17,12 +17,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="icon" href="img/fitjob logo1.png" type="image/png">
+
+    <style>
+
+     /* زیباسازی کارت‌ها و دکمه‌ها در پنل کاربری */
+      .card {
+        border-radius: 1.25rem;
+        border: none;
+        background: #ffffff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+      }
+      .card .card-body {
+        padding: 2rem;
+      }
+      /* لیست منوی کناری */
+      .list-group-item {
+        border-radius: 0.75rem;
+        margin-bottom: 0.4rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .list-group-item:hover {
+        background-color: #f0f9ff;
+      }
+
+      .list-group-item a {
+        font-weight: 500;
+      }
+
+      .list-group-item i {
+        min-width: 20px;
+      }
+    /* عکس پروفایل */
+    img.rounded-circle {
+            border: 3px solid #fcd34d;
+            padding: 4px;
+          }
+
+          /* مشخصات کاربر */
+          .card .d-flex span:first-child {
+            color: #009db8;
+          }
+    </style>
 </head>
 <body>
 
-
   <div id="header"></div>
-
 
 <!-- Main Content -->
 <div class="container my-5">
@@ -33,15 +73,15 @@
         <div class="card shadow-lg p-4 rounded-4" style="border: none;">
           <div class="card-body">
   
+
+            <img src="img/user.png" alt="عکس کاربر" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <h5 class="mb-1">سحر محمدی</h5>
             <div class="d-flex justify-content-start" style="align-items: center;">
+              <div class="container mb-4 text-center">
               <a href="order.html" class="btn btn-primary mt-3">
-                <i class="fas fa-shopping-cart ms-2"></i>سبد خرید
+                <i class=" ms-2" ></i>دریافت برنامه
               </a>
             </div>
-  
-            <div class="d-flex align-items-center mt-4">
-              <img src="img/fitjob logo1.png" alt="لوگو" style="width: 30px; height: 30px; margin-left: 10px;">
-              <p class="mb-0" style="margin-top: 10px;">خوش آمدید</p>
             </div>
   
             <ul class="list-group mt-3 text-end">
@@ -51,17 +91,16 @@
                 </a>
               </li>
               <li class="list-group-item border-0">
-                <a href="Wallet.html" class="text-decoration-none text-dark">
-                  <i class="fas fa-wallet ms-2"></i>کیف پول
-                </a>
-              </li>
-              <li class="list-group-item border-0">
                 <a href="edit-profile.html" class="text-decoration-none text-dark">
                   <i class="fas fa-user ms-2"></i>مشخصات فردی
                 </a>
               </li>
               </li>
-
+              <li class="list-group-item border-0">
+                <a href="my-plans.html" class="text-decoration-none text-dark">
+                  <i class="fas fa-layer-group ms-2"></i>برنامه های من
+                </a>
+              </li>
               <li class="list-group-item border-0">
                 <a href="order-history.html" class="text-decoration-none text-dark">
                   <i class="fas fa-file-invoice ms-2"></i> تاریخچه اشتراک‌ها
@@ -73,7 +112,11 @@
             <i class="fas fa-star text-dark ms-2"></i> امتیازات من
               </a>
             </li>
-
+            <li class="list-group-item border-0">
+              <a href="wallet.html" class="text-decoration-none text-dark">
+                <i class="fas fa-wallet ms-2"></i>کیف پول
+              </a>
+            </li>
               
               <li class="list-group-item border-0">
                 <a href="change-password.html" class="text-decoration-none text-dark">
@@ -96,11 +139,8 @@
       <div class="col-md-8">
         <div class="card shadow-lg p-4 rounded-4" style="border: none;">
           <div class="card-body text-center">
-            <img src="img/user.png" alt="عکس کاربر" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
-            <h5 class="mb-1">سحر محمدی</h5>
-            <p class="text-muted mb-2">کاربر ویژه</p>
-            <p class="text-success mb-3">اشتراک فعال: سه ماهه</p>
-      
+            
+
             <div class="row justify-content-center text-end mb-3" dir="rtl">
               <div class="col-10 col-md-8">
                 <div class="d-flex justify-content-between border-bottom py-2">
@@ -111,6 +151,7 @@
                   <span class="fw-bold">وزن:</span>
                   <span>۶۸ کیلوگرم</span>
                 </div>
+          
                 <div class="d-flex justify-content-between border-bottom py-2">
                   <span class="fw-bold">سن:</span>
                   <span>۲۸ سال</span>
@@ -135,11 +176,10 @@
           </div>
         </div>
       </div>
-      
-      
-  
     </div>
   </div>
+
+  
 
   
   <div id="footer"></div>
@@ -192,6 +232,27 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // فرض: رژیم 30 روزه - کاربر روز 18
+    const totalDays = 30;
+    const completedDays = 18;
+    const percent = Math.round((completedDays / totalDays) * 100);
+
+    const bar = document.getElementById("progressBar");
+    const label = document.getElementById("progressText");
+
+    // انیمیشن ملایم
+    setTimeout(() => {
+      bar.style.width = percent + "%";
+      label.innerText = percent + "٪";
+    }, 300);
+  });
+</script>
+
+
+
 
 </body>
 </html>
