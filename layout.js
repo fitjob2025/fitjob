@@ -35,7 +35,7 @@ const footerHTML = `
 <!-- Footer -->
 <footer class="footer text-white py-4" dir="rtl" style="background-color: #009db8;">
   <div class="container">
-
+<br>
     <div class="row gy-4">
 
       <!-- لوگو و نماد اعتماد -->
