@@ -3,7 +3,10 @@ body {
     margin: 0;
     font-family: 'Vazir' ,Tahoma !important;
     background-color: #e4ffff !important;
+    overflow-x: hidden !important;
+    width: 100%;
 }
+
 
 /* رنگ پس‌زمینه */
 .bg-primary {

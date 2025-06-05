@@ -31,22 +31,26 @@ const headerHTML = `
 `;
 
 const footerHTML = `
+
 <!-- Footer -->
-<footer class="footer text-white py-4" dir="rtl">
+<footer class="footer text-white py-4" dir="rtl" style="background-color: #009db8;">
   <div class="container">
 
-    <br><br>
+    <div class="row gy-4">
 
-    <div class="row">
-      <div class="col-md-3">
+      <!-- لوگو و نماد اعتماد -->
+      <div class="col-12 col-md-6 col-lg-3">
         <a class="navbar-brand" href="index.html">
-          <img src="img/fitjob logo white.png" height="50px" alt="FitJob Logo">
+          <img src="img/fitjob logo white.png" height="50" alt="FitJob Logo">
         </a>
+        <br><br>
+        <img src="img/ساماندهی.png" alt="نماد اعتماد" style="height:120px;">
       </div>
 
-      <div class="col-md-3" style="color: #fcd34d;">
-        <h5>
-          <i class="fas fa-link me-2"></i>          لینک‌ها
+      <!-- لینک‌ها -->
+      <div class="col-6 col-md-6 col-lg-3">
+        <h5 class="text-warning">
+          <i class="fas fa-link me-2"></i> لینک‌ها
         </h5>
         <ul class="list-unstyled">
           <li><a href="index.html" class="text-white"><i class="fas fa-home ms-2"></i>خانه</a></li>
@@ -57,8 +61,9 @@ const footerHTML = `
         </ul>
       </div>
 
-      <div class="col-md-3">
-        <h5 style="color: #fcd34d;">
+      <!-- اطلاعات تماس -->
+      <div class="col-6 col-md-6 col-lg-3">
+        <h5 class="text-warning">
           <i class="fas fa-paper-plane"></i> ارتباط با ما
         </h5>
         <p>
@@ -73,23 +78,32 @@ const footerHTML = `
         </p>
       </div>
 
-      <!-- نقشه گوگل -->
-      <div class="col-md-3">
-        <h5 style="color: #fcd34d;">
+      <!-- نقشه -->
+      <div class="col-12 col-lg-3">
+        <h5 class="text-warning">
           <i class="fas fa-map-marker-alt me-2"></i> موقعیت ما
-        </h5>        
+        </h5>
         <div class="ratio ratio-4x3 rounded overflow-hidden">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1381.383505070901!2d50.81211789202067!3d34.566157679477804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f93a3d0521940c5%3A0xfb39e13adacfccdc!2sQom%20Girls%20National%20University%20of%20Skills!5e0!3m2!1sen!2sus!4v1747921295436!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1381.383505070901!2d50.81211789202067!3d34.566157679477804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f93a3d0521940c5%3A0xfb39e13adacfccdc!2sQom%20Girls%20National%20University%20of%20Skills!5e0!3m2!1sen!2us!4v1747921295436!5m2!1sen!2us" 
+            style="border:0; width: 100%; height: 100%;" 
+            allowfullscreen 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
-      
+
     </div>
 
-    <div class="text-center pt-3" style="color: #fcd34d;">
-      <p class="mb-0">&copy; 2025 <a href="index.html">فیت‌جاب</a> - تمامی حقوق برای فاطمه سادات رضوی و فاطمه عزت‌نشان محفوظ است.</p>
+    <!-- کپی‌رایت -->
+    <div class="text-center pt-4 mt-4 border-top border-light" style="color: #fcd34d;">
+      <p class="mb-0">&copy; 2025 <a href="index.html" class="text-warning">فیت‌جاب</a> - تمامی حقوق برای فاطمه سادات رضوی و فاطمه عزت‌نشان محفوظ است.</p>
     </div>
   </div>
 </footer>
+
+
 `;
 
 document.addEventListener("DOMContentLoaded", () => {
